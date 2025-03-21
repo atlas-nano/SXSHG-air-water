@@ -1,0 +1,34 @@
+$molecule
+0 1
+ O        2.517790       12.165250       58.557362
+ H        2.712790       12.550870       57.698360
+ H        3.334790       11.651190       58.804359
+ O        5.901690       12.066940       60.898361
+ H        5.783390       12.646860       61.665359
+ H        6.820590       12.009100       60.650360
+ O        4.423290       10.101590       58.499359
+ H        3.941490        9.325290       58.375359
+ H        4.931890        9.949590       59.303360
+$end
+
+$rem
+   BASIS  =  aug-cc-pvtz
+   JOB_TYPE  =  sp
+   METHOD  =  src1-r1
+   SCF_CONVERGENCE  =  8
+   CIS_N_ROOTS = 10      ! number of excitations
+   CIS_TRIPLETS = false  ! singlet states only
+   TRNSS = true          ! truncated active space trigger
+   TRTYPE = 3            ! active space specification 3 for list of occupied states all virtuals
+   N_SOL = 1             ! number of active orbitals in alist section
+   mem_total = 16000
+   mem_static = 2000
+   symmetry = false
+   sym_ignore = true
+   nto_pairs = 3
+   gui = 2
+$end
+
+$alist
+   1
+$end
